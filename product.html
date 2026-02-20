@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My E‑Commerce • Product</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">My E‑Commerce</a>
+    <nav class="nav">
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <a class="link" href="products.html">← Back to products</a>
+    <div id="productView" class="product-view"></div>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> My E‑Commerce</small>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.PAGE = "product";
+  </script>
+</body>
+</html>

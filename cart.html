@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My E‑Commerce • Cart</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">My E‑Commerce</a>
+    <nav class="nav">
+      <a href="products.html">Products</a>
+      <a class="active" href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Your Cart</h1>
+    <div id="cartItems" class="stack"></div>
+
+    <div class="cart-summary">
+      <div>
+        <div class="muted">Subtotal</div>
+        <div class="total"><span id="cartSubtotal">0</span> ৳</div>
+      </div>
+      <button id="checkoutBtn" class="btn" type="button">Checkout (Demo)</button>
+    </div>
+
+    <p class="muted small">নোট: এটা ডেমো—পেমেন্ট/অর্ডার পরে যোগ করবো।</p>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> My E‑Commerce</small>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    window.PAGE = "cart";
+  </script>
+</body>
+</html>
