@@ -3,36 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My E-Commerce • Products</title>
+  <title>My E-Commerce • Product</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body data-page="products">
+<body data-page="product">
   <header class="site-header">
     <a class="brand" href="./index.html">My E-Commerce</a>
     <nav class="nav">
-      <a class="active" href="./products.html">Products</a>
+      <a href="./products.html">Products</a>
       <a href="./cart.html">Cart (<span id="cartCount">0</span>)</a>
     </nav>
   </header>
 
   <main class="container">
-    <h1>Products</h1>
-
-    <div class="controls">
-      <input id="searchInput" class="input" type="search" placeholder="Search products..." />
-      <select id="categorySelect" class="input">
-        <option value="all">All categories</option>
-      </select>
-      <select id="sortSelect" class="input">
-        <option value="featured">Featured</option>
-        <option value="priceAsc">Price: Low → High</option>
-        <option value="priceDesc">Price: High → Low</option>
-        <option value="nameAsc">Name: A → Z</option>
-      </select>
-    </div>
-
-    <div id="productsGrid" class="grid"></div>
+    <a class="link" href="./products.html">← Back to products</a>
+    <div id="productView" class="product-view"></div>
   </main>
 
   <footer class="site-footer">
