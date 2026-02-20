@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketNest • Shop</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body data-page="products">
+  <div class="top-strip">
+    <div class="container top-strip__inner">
+      <div class="top-strip__left"><span class="chip">USD</span><span class="chip">English</span></div>
+      <div class="top-strip__right">
+        <a href="#" class="top-link">My Account</a>
+        <a href="./cart.html" class="top-link">My Cart</a>
+        <a href="#" class="top-link">Checkout</a>
+        <a href="#" class="top-link">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html"><span class="logo__mark">MN</span><span class="logo__text">MarketNest</span></a>
+
+      <form class="search" role="search">
+        <div class="search__select"><span id="activeCategory">All</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <input id="searchInput" class="search__input" type="search" placeholder="Search products..." />
+        <button class="search__btn" type="submit" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+
+      <a class="cart-pill" href="./cart.html"><span class="cart-pill__icon">🛒</span><span class="cart-pill__text">Cart</span><span class="cart-pill__count" id="cartCount">0</span></a>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <button class="nav__categories" id="catToggle" type="button"><span class="hamburger"></span>Categories</button>
+      <a class="nav__link" href="./index.html">Home</a>
+      <a class="nav__link is-active" href="./products.html">Shop</a>
+      <div class="nav__spacer"></div>
+      <a class="nav__link nav__link--cta" href="./cart.html">Checkout</a>
+    </div>
+  </nav>
+
+  <main class="container shop">
+    <aside class="panel shop__filters">
+      <div class="panel__title">Filters</div>
+      <label class="field">
+        <span class="field__label">Category</span>
+        <select id="categorySelect" class="input">
+          <option value="all">All</option>
+        </select>
+      </label>
+      <label class="field">
+        <span class="field__label">Sort</span>
+        <select id="sortSelect" class="input">
+          <option value="featured">Featured</option>
+          <option value="priceAsc">Price: Low → High</option>
+          <option value="priceDesc">Price: High → Low</option>
+          <option value="nameAsc">Name: A → Z</option>
+        </select>
+      </label>
+      <p class="muted small">Tip: This is a static demo. We’ll add backend later.</p>
+    </aside>
+
+    <section>
+      <div class="section__head">
+        <h1 class="section__title">Shop</h1>
+        <div class="muted" id="resultCount"></div>
+      </div>
+      <div class="grid" id="productsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="muted">© <span id="year"></span> MarketNest</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

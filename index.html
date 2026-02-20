@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketNest • Home</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body data-page="home">
+  <div class="top-strip">
+    <div class="container top-strip__inner">
+      <div class="top-strip__left">
+        <span class="chip">USD</span>
+        <span class="chip">English</span>
+      </div>
+      <div class="top-strip__right">
+        <a href="#" class="top-link">My Account</a>
+        <a href="./cart.html" class="top-link">My Cart</a>
+        <a href="#" class="top-link">Checkout</a>
+        <a href="#" class="top-link">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">
+        <span class="logo__mark">MN</span>
+        <span class="logo__text">MarketNest</span>
+      </a>
+
+      <form class="search" role="search">
+        <div class="search__select" title="category select">
+          <span id="activeCategory">All</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <input id="searchQ" class="search__input" type="search" placeholder="Search products..." />
+        <button class="search__btn" type="submit" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3m1.8-5.2a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+
+      <a class="cart-pill" href="./cart.html">
+        <span class="cart-pill__icon">🛒</span>
+        <span class="cart-pill__text">Cart</span>
+        <span class="cart-pill__count" id="cartCount">0</span>
+      </a>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav__inner">
+      <button class="nav__categories" id="catToggle" type="button">
+        <span class="hamburger"></span>
+        Categories
+      </button>
+      <a class="nav__link is-active" href="./index.html">Home</a>
+      <a class="nav__link" href="./products.html">Shop</a>
+      <a class="nav__link" href="#new">New</a>
+      <a class="nav__link" href="#deals">Deals</a>
+      <a class="nav__link" href="#about">About</a>
+      <div class="nav__spacer"></div>
+      <a class="nav__link nav__link--cta" href="#offers">Today’s Offers</a>
+    </div>
+  </nav>
+
+  <main class="container main">
+    <aside class="sidebar" id="sidebar">
+      <div class="panel">
+        <div class="panel__title">Categories</div>
+        <ul class="cat-list" id="catList"></ul>
+      </div>
+
+      <div class="panel" id="deals">
+        <div class="panel__title">Hot Deal</div>
+        <div class="deal-card">
+          <img class="deal-card__img" src="./assets/img/product.svg" alt="Deal product" />
+          <div class="deal-card__meta">
+            <div class="deal-card__name">Weekend Flash Deal</div>
+            <div class="deal-card__price">
+              <span class="price">$59.00</span>
+              <span class="price price--muted">$89.00</span>
+            </div>
+            <button class="btn btn--block" type="button" data-add="p3002">Add to cart</button>
+          </div>
+        </div>
+        <div class="timer">
+          <div class="timer__label">Ends in</div>
+          <div class="timer__grid">
+            <div class="timebox"><span id="tDays">00</span><small>days</small></div>
+            <div class="timebox"><span id="tHrs">00</span><small>hrs</small></div>
+            <div class="timebox"><span id="tMin">00</span><small>min</small></div>
+            <div class="timebox"><span id="tSec">00</span><small>sec</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__title">Special</div>
+        <div class="callout">
+          <div class="callout__title">Free delivery</div>
+          <div class="callout__desc">On orders over $39 • demo copy</div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="hero">
+        <img class="hero__img" src="./assets/img/hero.svg" alt="Hero banner" />
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="./products.html">Shop now</a>
+          <a class="btn btn--ghost" href="#new">Explore</a>
+        </div>
+      </section>
+
+      <section class="trust" id="offers">
+        <div class="trust__item">
+          <div class="trust__icon">↩️</div>
+          <div>
+            <div class="trust__title">Money-back</div>
+            <div class="trust__desc">30-day guarantee</div>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__icon">🚚</div>
+          <div>
+            <div class="trust__title">Fast shipping</div>
+            <div class="trust__desc">Nationwide delivery</div>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__icon">🏷️</div>
+          <div>
+            <div class="trust__title">Weekly offers</div>
+            <div class="trust__desc">Save on favorites</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="new">
+        <div class="section__head">
+          <h2 class="section__title">New Products</h2>
+          <div class="tabs" id="tabs"></div>
+        </div>
+        <div class="grid" id="homeGrid"></div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="banner">
+          <div class="banner__text">
+            <h3>Build your own marketplace</h3>
+            <p>This is an original layout inspired by common e-commerce patterns (not a 1:1 copy). Replace images, colors, and content freely.</p>
+          </div>
+          <a class="btn btn--primary" href="./products.html">Open shop</a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="logo logo--footer">
+          <span class="logo__mark">MN</span>
+          <span class="logo__text">MarketNest</span>
+        </div>
+        <p class="muted">Demo storefront • static HTML/CSS/JS</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <div class="footer__title">Shop</div>
+          <a class="footer__link" href="./products.html">All products</a>
+          <a class="footer__link" href="#deals">Deals</a>
+        </div>
+        <div>
+          <div class="footer__title">Help</div>
+          <a class="footer__link" href="#">Support</a>
+          <a class="footer__link" href="#">Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>

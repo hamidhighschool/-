@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketNest • Product</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body data-page="product">
+  <div class="top-strip">
+    <div class="container top-strip__inner">
+      <div class="top-strip__left"><span class="chip">USD</span><span class="chip">English</span></div>
+      <div class="top-strip__right"><a href="./cart.html" class="top-link">My Cart</a></div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html"><span class="logo__mark">MN</span><span class="logo__text">MarketNest</span></a>
+      <div class="header__crumbs">
+        <a class="crumb" href="./products.html">Shop</a>
+        <span class="crumb">/</span>
+        <span class="crumb" id="crumbName">Product</span>
+      </div>
+      <a class="cart-pill" href="./cart.html"><span class="cart-pill__icon">🛒</span><span class="cart-pill__text">Cart</span><span class="cart-pill__count" id="cartCount">0</span></a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product" id="productView"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="muted">© <span id="year"></span> MarketNest</div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+</html>
